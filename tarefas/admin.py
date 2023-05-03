@@ -1,5 +1,5 @@
 from django.contrib import admin
-from tarefas.models import Tasks
+from tarefas.models import Tasks, Disciplina
 
 
 class TasksAdmin(admin.ModelAdmin):
@@ -7,4 +7,10 @@ class TasksAdmin(admin.ModelAdmin):
     search_fields = ('deadline',)
 
 
+class DisciplinaAdmin(admin.ModelAdmin):
+    list_display = ('nome',)
+    search_fields = ('nome',)
+
+
 admin.site.register(Tasks, TasksAdmin)
+admin.site.register(Disciplina, DisciplinaAdmin)
