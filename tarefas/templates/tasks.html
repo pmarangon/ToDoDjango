@@ -1,0 +1,16 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Meus Compromissos</title>
+</head>
+{% block content %}
+<body>
+   {% if task_name %}
+   <p>A tarefa a ser entregue é: {{ tasks.tarefa }}</p>
+{% else %}
+   <p>{{ 'Hoje ta de boa, sem tarefa pra entregar' }}</p>
+{% endif %}
+{% endblock %}
+</html>
